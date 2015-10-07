@@ -41,7 +41,7 @@ $scope = {
 
 <!-- attribute form is fine too -->
 <ivh-pager
-    ivh-pager-page-num="ixPage"
+    ivh-pager-page-number="ixPage"
     ivh-pager-total="bigCollection.length">
 </ivh-pager>
 ```
@@ -64,7 +64,7 @@ $scope = {
 
 <!-- attribute form is fine too -->
 <ivh-pager
-    ivh-pager-page-num="ixPage"
+    ivh-pager-page-number="ixPage"
     ivh-pager-page-size="sizeOfPage"
     ivh-pager-total="bigCollection.length">
 </ivh-pager>
