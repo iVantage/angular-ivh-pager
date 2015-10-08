@@ -70,6 +70,18 @@ $scope = {
 </ivh-pager>
 ```
 
+As well as button sizes:
+
+```html
+<ivh-pager
+    ivh-pager-page-number="ixPage"
+    ivh-pager-button-size="'lg'" 
+    ivh-pager-total="bigCollection.length">
+</ivh-pager>
+```
+
+Button sizes can be one of `'lg'`, ''sm'` or `''` (the empty string) for the
+default button size.
 
 ## Testing
 
