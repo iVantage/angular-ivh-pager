@@ -39,10 +39,20 @@ angular.module('ivh.pager')
          *
          * Defaults to `0`, the first page.
          */
-        pagerPageNumber: '=ivhPagerPageNumber'
+        pagerPageNumber: '=ivhPagerPageNumber',
+
+        /**
+         * If provided, should be one of:
+         * - '' (the emtpy string)
+         * - 'sm' (for small buttons)
+         * - 'lg' (for large buttons)
+         */
+        pagerButtonSize: '=ivhPagerButtonSize'
       },
       template: [
-        '<ul class="pagination" ng-show="pageRange.length > 1">',
+        '<ul class="pagination"',
+            'ng-class="{\'pagination-lg\': pagerButtonSize === \'lg\', \'pagination-sm\': pagerButtonSize === \'sm\'}"',
+            'ng-show="pageRange.length > 1">',
           '<li ng-class="{disabled: pagerPageNumber == 0}">',
             '<a ng-click="goTo(0)">&laquo;</a>',
           '</li>',
