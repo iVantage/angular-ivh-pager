@@ -83,6 +83,22 @@ As well as button sizes:
 Button sizes can be one of `'lg'`, ''sm'` or `''` (the empty string) for the
 default button size.
 
+### Page Change Callbacks
+
+IVH Pager provides a hook for user-driven page changes. Assign an angular
+expression to `ivh-pager-on-page-change`, you will have access to the variables
+`newPage` and `oldPage` corresponding to the new and old page indexes
+respectively.
+
+```html
+<ivh-pager
+    ivh-pager-page-number="ixPage"
+    ivh-pager-button-size="'lg'" 
+    ivh-pager-total="bigCollection.length"
+    ivh-pager-on-page-change="myChangeHandler(newPage, oldPage)">
+</ivh-pager>
+```
+
 ## Testing
 
 Use `npm test` to run the full suite of linting, style checks, and unit tests.

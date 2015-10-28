@@ -47,7 +47,12 @@ angular.module('ivh.pager')
          * - 'sm' (for small buttons)
          * - 'lg' (for large buttons)
          */
-        pagerButtonSize: '=ivhPagerButtonSize'
+        pagerButtonSize: '=ivhPagerButtonSize',
+
+        /**
+         * Callback for when the page changes
+         */
+        pagerOnPageChange: '&ivhPagerOnPageChange'
       },
       template: [
         '<ul class="pagination"',
@@ -114,7 +119,15 @@ angular.module('ivh.pager')
         };
 
         scope.goTo = function(pageNumber) {
-          scope.pagerPageNumber = pageNumber;
+          var oldPage = scope.pagerPageNumber
+            , newPage = pageNumber;
+          scope.pagerPageNumber = newPage;
+
+          scope.pagerOnPageChange({
+            oldPage: oldPage,
+            newPage: newPage
+          });
+
           updatePager();
         };
 
