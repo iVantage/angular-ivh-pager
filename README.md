@@ -115,7 +115,7 @@ needed when you make changes to source files.
 
 ## Changelog
 
-- 2015-10-28 v0.3.0 Initial release
+- 2015-10-28 v0.3.0 Add page change callbacks
 - 2015-10-07 v0.1.0 Initial release
 
 
