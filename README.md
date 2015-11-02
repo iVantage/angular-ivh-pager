@@ -90,6 +90,10 @@ expression to `ivh-pager-on-page-change`, you will have access to the variables
 `newPage` and `oldPage` corresponding to the new and old page indexes
 respectively.
 
+Note that if you have your own variables bound to the pager page index the
+expression will be evaluated before AngularJS has a chance to update your bound
+variable. I.e. your variable will reflect `oldPage` rather than `newPage`.
+
 ```html
 <ivh-pager
     ivh-pager-page-number="ixPage"
